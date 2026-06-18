@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title    </title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ TOP BAR ============ -->
+  <header class="topbar">
+    <div class="topbar__row">
+
+      <a class="logo" href="#" id="logoHome">
+        shop<span>zy</span>
+      </a>
+
+      <button class="deliver" id="deliverBtn">
+        <span class="deliver__icon">📍</span>
+        <span class="deliver__text">
+          <small>Deliver to</small>
+          <strong id="deliverCity">Ghaziabad 201001</strong>
+        </span>
+      </button>
+
+      <div class="searchbar">
+        <select class="searchbar__cat" id="categorySelect">
+          <option value="all">All</option>
+        </select>
+        <input type="text" id="searchInput" class="searchbar__input" placeholder="Search shopzy.in">
+        <button class="searchbar__btn" id="searchBtn" aria-label="Search">🔍</button>
+      </div>
+
+      <button class="topbar__link" id="langBtn">🇮🇳 EN</button>
+
+      <button class="topbar__link topbar__account" id="accountBtn">
+        <small>Hello, sign in</small>
+        <strong>Account &amp; Lists ▾</strong>
+      </button>
+
+      <button class="topbar__link" id="ordersBtn">
+        <small>Returns</small>
+        <strong>&amp; Orders</strong>
+      </button>
+
+      <button class="topbar__link cart" id="cartBtn">
+        <span class="cart__icon">🛒</span>
+        <span class="cart__count" id="cartCount">0</span>
+        <strong>Cart</strong>
+      </button>
+    </div>
+
+    <!-- ============ SUB NAV ============ -->
+    <nav class="subnav" id="subnav">
+      <button class="subnav__all" id="menuBtn">☰ All</button>
+      <a href="#deals" data-filter="deal">Today's Deals</a>
+      <a href="#" data-filter="all">Best Sellers</a>
+      <a href="#" data-filter="electronics">Electronics</a>
+      <a href="#" data-filter="fashion">Fashion</a>
+      <a href="#" data-filter="home">Home &amp; Kitchen</a>
+      <a href="#" data-filter="books">Books</a>
+      <a href="#" data-filter="beauty">Beauty</a>
+      <a href="#" id="prime">Prime ▾</a>
+    </nav>
+  </header>
+
+  <!-- ============ SIDE MENU (drawer) ============ -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="sideMenu">
+    <div class="drawer__head">
+      <span>👤 Hello, sign in</span>
+      <button id="closeSideMenu">✕</button>
+    </div>
+    <h3>Shop by Category</h3>
+    <ul class="drawer__list" id="drawerCats"></ul>
+  </aside>
+
+  <!-- ============ CART DRAWER ============ -->
+  <aside class="cartDrawer" id="cartDrawer">
+    <div class="drawer__head">
+      <span>Your Cart</span>
+      <button id="closeCartDrawer">✕</button>
+    </div>
+    <div id="cartItems" class="cartItems"></div>
+    <div class="cartDrawer__footer">
+      <div class="cartDrawer__total">
+        Subtotal: <strong id="cartSubtotal">₹0</strong>
+      </div>
+      <button class="btn btn--cta" id="checkoutBtn">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <main>
+
+    <!-- Hero / banner carousel -->
+    <section class="hero" id="hero">
+      <div class="hero__track" id="heroTrack"></div>
+      <button class="hero__nav hero__nav--prev" id="heroPrev">‹</button>
+      <button class="hero__nav hero__nav--next" id="heroNext">›</button>
+      <div class="hero__dots" id="heroDots"></div>
+    </section>
+
+    <!-- Category cards row -->
+    <section class="categoryGrid" id="categoryGrid"></section>
+
+    <!-- Deals strip -->
+    <section class="deals" id="deals">
+      <div class="deals__head">
+        <h2>Today's Deals</h2>
+        <a href="#" data-filter="deal" class="seeAll">See all deals ›</a>
+      </div>
+      <div class="deals__row" id="dealsRow"></div>
+    </section>
+
+    <!-- Product grid -->
+    <section class="catalog">
+      <div class="catalog__head">
+        <h2 id="catalogTitle">Recommended for you</h2>
+        <span id="resultCount"></span>
+      </div>
+      <div class="catalog__grid" id="catalogGrid"></div>
+    </section>
+
+  </main>
+
+  <!-- ============ PRODUCT MODAL ============ -->
+  <div class="overlay" id="modalOverlay"></div>
+  <div class="productModal" id="productModal">
+    <button class="productModal__close" id="closeModal">✕</button>
+    <div class="productModal__body" id="productModalBody"></div>
+  </div>
+
+  <!-- ============ TOAST ============ -->
+  <div class="toast" id="toast"></div>
+
+  <!-- ============ FOOTER ============ -->
+  <button class="backToTop" id="backToTop">Back to top</button>
+  <footer class="footer">
+    <div class="footer__cols">
+      <div>
+        <h4>Get to Know Us</h4>
+        <a href="#">About shopzy</a>
+        <a href="#">Careers</a>
+        <a href="#">Press Releases</a>
+        <a href="#">shopzy Cares</a>
+      </div>
+      <div>
+        <h4>Connect with Us</h4>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+      </div>
+      <div>
+        <h4>Make Money with Us</h4>
+        <a href="#">Sell on shopzy</a>
+        <a href="#">Become an Affiliate</a>
+        <a href="#">Advertise Your Products</a>
+        <a href="#">Self-Publish</a>
+      </div>
+      <div>
+        <h4>Let Us Help You</h4>
+        <a href="#">Your Account</a>
+        <a href="#">Returns Centre</a>
+        <a href="#">100% Purchase Protection</a>
+        <a href="#">Help</a>
+      </div>
+    </div>
+    <div class="footer__logo">shop<span>zy</span></div>
+    <div class="footer__bottom">
+      <span>This is a demo project built for learning HTML, CSS &amp; JavaScript — not affiliated with any real retailer.</span>
+      <span>© 2026 shopzy.in — a practice clone</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
